@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <title>FormularioDeCadastroDeAluno</title>
+</head>
+    <body>
+        <div class="container">
+            <div class="header">
+            <h2>GERENCIAMENTO DE ESCOLA</h2>
+            <hr>
+            <div class="headersButton">
+                <button id="menu_Novo" onclick="novo_Aluno()">Novo Aluno</button>
+                <button id="menu_Listar" onclick="listar_Aluno()">Listar Aluno</button>
+            </div><!-- headersButton -->
+            </div><!-- header -->
+            <!---------------------------------------- FORMULARIO --------------------->
+            <form id="pagina_novo" class="form" style="display: none;">
+            <h3>CADASTO DE ALUNOS</h3>
+            <div class="formControl">
+                <label for="nome">Nome do Aluno</label>
+                <input placeholder="Nome" id="nome"type="text" required>
+                <small>É preciso o nome do aluno. </small>
+                <i class="fas fa-exclamation-circle"></i>
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <div class="formControl">
+                <label for="email">Email</label>
+                <input placeholder="email" id="email" type="text" required>
+                <small>É preciso de um e-mail.</small>
+                <i class="fas fa-exclamation-circle"></i>
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <div class="formControl">
+                <label for="telefone">Telefone</label>
+                <input placeholder="Telefone" id="telefone" type="number" required>
+                <i class="fas fa-exclamation-circle"></i>
+                <i class="fas fa-check-circle"></i>
+                <small>É preciso do numero de telefone.</small>
+            </div>
+                <button type="submit" onclick="cadastrarNovoAluno()">Cadastrar</button>
+
+            </form><!-- form -->
+            <!---------------------------------------- Tabela ------------------------>
+        <div id="pagina_listar" class="tableControl" style="display: none; border: 1px solid black;"> 
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Telefone</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela_Alunos"></tbody>       
+            </table><!-- tabela -->
+        </div><!--tableControl-->
+        </div>  <!--container-->
+        <script src="https://kit.fontawesome.com/aebd7dea04.js" crossorigin="anonymous"></script>
+        <script src="eventos.js"></script>
+    </body>
+</html>

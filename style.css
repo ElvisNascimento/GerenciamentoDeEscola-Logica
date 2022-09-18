@@ -1,0 +1,121 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    width: 100%;
+    min-width: 100vh;
+    background: linear-gradient(90deg,#0098de 0%,rgb(154, 154, 154) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+.container{
+    margin-top:5%;
+    background-color: #fafafa;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0,0.3);
+    width: 400px;
+    max-width: 100%;
+    overflow: hidden;
+}
+.header{
+    background-color: #eee;
+    padding: 20px;
+}
+.headersButton{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.header button{
+    margin-top: 10px;
+    width: 45%;
+}
+.form{
+    padding: 20px;
+}
+.formControl{
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+}
+.formControl label{
+    display: inline-block;
+    margin-bottom: 5px;
+}
+.formControl input{
+    border:  2px solid #f0f0f0;
+    display: block;
+    border-radius: 10px;
+    font-size: 10px;
+    width: 100%;
+    padding: 10px;
+}
+.formControl i{
+    position: absolute;
+    top: 42px;
+    right: 10px;
+    visibility: hidden;
+}
+.formControl small{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+}
+.form button{
+    background-color: #0098de;
+    border: 2px solid #fafafa;
+    color: rgb(224, 224, 224);
+    border-radius: 10px;
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+}
+.form button:hover{
+    background-color: #1293cf;
+    border: 2px solid #0aaef9;
+    color: rgb(255, 255, 255);
+}
+.table{
+    padding: 20px;
+    font-size: 12px;
+    width: 100%;
+    align-items: center;
+    border-collapse: collapse;
+    text-align: center;
+}
+.table thead,tbody,th,td{
+    border: 1px solid #222;    
+}
+.tableControl{
+    margin-bottom: 10px;
+    /* padding-bottom: 20px; */
+    position: relative;
+    display: inline-block;
+}
+
+/* Erro e Sucesso */
+.formControl.success input{
+    border-color: #2ecc71;
+}
+.formControl.error input{
+    border-color: rgb(255, 63, 63);
+}
+.formControl.success i.fa-check-circle{
+    visibility: visible;
+    color: #2ecc71;
+}
+.formControl.error i.fa-exclamation-circle{
+    visibility: visible;
+    color: rgb(255, 63, 63);
+}
+.formControl.error small{
+    color: rgb(255, 63, 63);
+    visibility: visible;
+}
+
+
