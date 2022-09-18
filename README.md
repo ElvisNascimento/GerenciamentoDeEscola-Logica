@@ -1,0 +1,1 @@
+# GerenciamentoDeEscola-Logica
